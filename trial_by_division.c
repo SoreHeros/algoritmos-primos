@@ -5,6 +5,7 @@
 #include "trial_by_division.h"
 #include "commons.h"
 #include <math.h>
+
 list trial_by_division(prime number){
     list l = listInit(prime_prediction(number));
 
