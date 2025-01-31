@@ -7,7 +7,7 @@
 
 list sieve_of_eratosthenes(prime number){
     list l = listInit(prime_prediction(number));
-    if(number > 2)
+    if(number >= 2)
         listAppend(l, 2);
 
     prime size = number / 2 + 1;
@@ -17,7 +17,7 @@ list sieve_of_eratosthenes(prime number){
         binArr[i] = 1;
 
     prime p, sqr;
-    for(p = 3, sqr; (sqr = p * p) <= number; p+=2){
+    for(p = 3; (sqr = p * p) <= number; p+=2){
         if(binArr[p / 2]){
             listAppend(l, p);
             for(;sqr <= number; sqr += 2 * p) //como p es impar, sumarle 2p se salta los pares
